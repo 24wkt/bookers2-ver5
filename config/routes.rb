@@ -15,5 +15,7 @@ Rails.application.routes.draw do
     get :followers, on: :member
   end
 
+  get '/search' => 'search#search'
+
 
 end
