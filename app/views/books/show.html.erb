@@ -27,7 +27,13 @@
           <% end %>
         </tr>
       </table>
-      <%= render 'books/comment', book: @book, book_comment: @book_comment %>
+      <div class='comment_area'>
+        <%= render 'book_comments/comment', book: @book, book_comment: @book_comment %>
+      </div>
+      <%= form_with(model:[@book, @book_comment], remote: true) do |f| %>
+      <%= f.text_area :comment %><br />
+      <%= f.submit "送信" %>
+  <% end %>
     </div>
   </div>
 </div>
