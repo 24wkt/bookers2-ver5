@@ -19,7 +19,7 @@
         <td class="favorite_<%= book.id %>">
           <%= render partial: 'favorites/favorite', locals: {book: book} %>
         </td>
-        <td>コメント数：<%= book.book_comments.count %></td>
+        <td class="comment-count">コメント数：<%= book.book_comments.count %></td>
       </tr>
     <% end %>
   </tbody>
